@@ -1,0 +1,18 @@
+FoodHub/
+│
+├── index.html
+├── menu.html
+├── cart.html
+├── checkout.html
+├── login.html
+├
+│
+├── css/
+│   └── style.css
+│
+├── js/
+|    ├── menu.js
+|    ├── cart.js
+|    ├── checkout.js
+|    └── login.js│
+└── images/

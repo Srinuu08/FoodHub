@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FoodHub-Menu</title>
+        <link rel="stylesheet" href="css/style.css">
+        
+    </head>
+    
+    <body>
+
+        <header>
+            <div class="logo-container">
+               
+                <img src="images/logo.png" alt="FoodHub Logo" width="150" height="150">   
+                <h1><span class="food">Food</span><span class="hub">Hub</span></h1>
+            </div>
+            <div class="nav-container">
+                <a href="index.html" class="nav-link"><h2>Home</h2></a> 
+                <a href="cart.html" class="nav-link"><h2>Cart</h2></a>
+                
+
+               
+            </div>
+           
+        </header>
+      
+
+
+    <main class="menu-page">
+
+        <h1 class="menu-title">Our Menu</h1>
+
+
+        <!-- VEG STARTERS -->
+
+        <section class="menu-section">
+
+            <h2 class="category-title">🥗 Veg Starters</h2>
+
+            <div class="menu-table">
+
+                <div class="menu-header">
+                    <span>Item</span>
+                    <span>Price</span>
+                    <span>Rating</span>
+                    <span>Action</span>
+                </div>
+
+
+                <div class="menu-row">
+                    <span>Paneer Tikka</span>
+                    <span>₹180</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Paneer Tikka',180)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Chilli Paneer</span>
+                    <span>₹170</span>
+                    <span class="rating">★★★★☆</span>
+                    <a class="order-small" onclick="addtocart('Chilli Paneer',170)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Gobi Manchurian</span>
+                    <span>₹150</span>
+                    <span class="rating">★★★★☆</span>
+                    <a  class="order-small" onclick="addtocart('Gobi Manchurian',150)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Gobi 65</span>
+                    <span>₹140</span>
+                    <span class="rating">★★★★☆</span>
+                    <a  class="order-small" onclick="addtocart('Gobi 65',140)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Crispy Corn</span>
+                    <span>₹160</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Crispy Corn',160)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Chilli Mushroom</span>
+                    <span>₹170</span>
+                    <span class="rating">★★★★☆</span>
+                    <a  class="order-small" onclick="addtocart('Chilli Mushroom',170)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Hara Bhara Kebab</span>
+                    <span>₹160</span>
+                    <span class="rating">★★★★☆</span>
+                    <a  class="order-small" onclick="addtocart('Hara Bhara Kebab',160)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Veg Spring Rolls</span>
+                    <span>₹150</span>
+                    <span class="rating">★★★★☆</span>
+                    <a  class="order-small" onclick="addtocart('Veg Spring Rolls',150)">Order</a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NON VEG STARTERS -->
+
+        <section class="menu-section">
+
+            <h2 class="category-title">🍗 Non-Veg Starters</h2>
+
+            <div class="menu-table">
+
+                <div class="menu-header">
+                    <span>Item</span>
+                    <span>Price</span>
+                    <span>Rating</span>
+                    <span>Action</span>
+                </div>
+
+                <div class="menu-row">
+                    <span>Chicken 65</span>
+                    <span>₹200</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Chicken 65',200)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Chicken Tikka</span>
+                    <span>₹220</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Chicken Tikka',220)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Chilli Chicken</span>
+                    <span>₹210</span>
+                    <span class="rating">★★★★☆</span>
+                    <a  class="order-small" onclick="addtocart('Chilli Chicken',210)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Chicken Lollipop</span>
+                    <span>₹240</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Chicken Lollipop',240)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Chicken Majestic</span>
+                    <span>₹230</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Chicken Majestic',230)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Tandoori Chicken</span>
+                    <span>₹280</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Tandoori Chicken',280)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Apollo Fish</span>
+                    <span>₹260</span>
+                    <span class="rating">★★★★☆</span>
+                    <a  class="order-small" onclick="addtocart('Apollo Fish',260)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Fish Fry</span>
+                    <span>₹240</span>
+                    <span class="rating">★★★★☆</span>
+                    <a  class="order-small" onclick="addtocart('Fish Fry',240)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Chilli Prawns</span>
+                    <span>₹280</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Chilli Prawns',280)">Order</a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VEG BIRYANIS -->
+
+        <section class="menu-section">
+
+            <h2 class="category-title">🥘 Veg Biryanis</h2>
+
+            <div class="menu-table">
+
+                <div class="menu-header">
+                    <span>Item</span>
+                    <span>Price</span>
+                    <span>Rating</span>
+                    <span>Action</span>
+                </div>
+
+                <div class="menu-row">
+                    <span>Veg Biryani</span>
+                    <span>₹180</span>
+                    <span class="rating">★★★★☆</span>
+                    <a  class="order-small" onclick="addtocart('Veg Biryani',180)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Veg Dum Biryani</span>
+                    <span>₹200</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Veg Dum Biryani',200)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Paneer Biryani</span>
+                    <span>₹220</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Paneer Biryani',220)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Mushroom Biryani</span>
+                    <span>₹210</span>
+                    <span class="rating">★★★★☆</span>
+                    <a  class="order-small" onclick="addtocart('Mushroom Biryani',210)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Kaju Biryani</span>
+                    <span>₹240</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Kaju Biryani',240)">Order</a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NON VEG BIRYANIS -->
+
+        <section class="menu-section">
+
+            <h2 class="category-title">🍗 Non-Veg Biryanis</h2>
+
+            <div class="menu-table">
+
+                <div class="menu-header">
+                    <span>Item</span>
+                    <span>Price</span>
+                    <span>Rating</span>
+                    <span>Action</span>
+                </div>
+
+                <div class="menu-row">
+                    <span>Chicken Biryani</span>
+                    <span>₹240</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Chicken Biryani',240)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Chicken Dum Biryani</span>
+                    <span>₹260</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Chicken Dum Biryani',260)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Chicken Fry Piece Biryani</span>
+                    <span>₹280</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Chicken Fry Piece Biryani',280)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Chicken 65 Biryani</span>
+                    <span>₹290</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Chicken 65 Biryani',290)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Mutton Biryani</span>
+                    <span>₹320</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Mutton Biryani',320)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Mutton Dum Biryani</span>
+                    <span>₹340</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Mutton Dum Biryani',340)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Fish Biryani</span>
+                    <span>₹300</span>
+                    <span class="rating">★★★★☆</span>
+                    <a  class="order-small" onclick="addtocart('Fish Biryani',300)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Prawn Biryani</span>
+                    <span>₹320</span>
+                    <span class="rating">★★★★★</span>
+                    <a  class="order-small" onclick="addtocart('Prawn Biryani',320)">Order</a>
+                </div>
+
+                <div class="menu-row">
+                    <span>Egg Biryani</span>
+                    <span>₹200</span>
+                    <span class="rating">★★★★☆</span>
+                    <a  class="order-small" onclick="addtocart('Egg Biryani',200)">Order</a>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- DRINKS & BEVERAGES -->
+
+<section class="menu-section">
+
+    <h2 class="category-title">🥤 Drinks & Beverages</h2>
+
+    <div class="menu-table">
+
+        <div class="menu-header">
+            <span>Item</span>
+            <span>Price</span>
+            <span>Rating</span>
+            <span>Action</span>
+        </div>
+
+        <div class="menu-row">
+            <span>Mineral Water (500ml)</span>
+            <span>₹20</span>
+            <span class="rating">★★★★☆</span>
+            <a  class="order-small" onclick="addtocart('Mineral Water (500ml)',20)">Order</a>
+        </div>
+
+        <div class="menu-row">
+            <span>Mineral Water (1 Litre)</span>
+            <span>₹30</span>
+            <span class="rating">★★★★☆</span>
+            <a  class="order-small" onclick="addtocart('Mineral Water (1 Litre)',30)">Order</a>
+        </div>
+
+        <div class="menu-row">
+            <span>Fresh Lime Soda</span>
+            <span>₹60</span>
+            <span class="rating">★★★★★</span>
+            <a  class="order-small" onclick="addtocart('Fresh Lime Soda',60)">Order</a>
+        </div>
+
+        <div class="menu-row">
+            <span>Fresh Lime Water</span>
+            <span>₹50</span>
+            <span class="rating">★★★★☆</span>
+            <a  class="order-small" onclick="addtocart('Fresh Lime Water',50)">Order</a>
+        </div>
+
+        <div class="menu-row">
+            <span>Sweet Lassi</span>
+            <span>₹80</span>
+            <span class="rating">★★★★★</span>
+            <a  class="order-small" onclick="addtocart('Sweet Lassi',80)">Order</a>
+        </div>
+
+        <div class="menu-row">
+            <span>Mango Lassi</span>
+            <span>₹90</span>
+            <span class="rating">★★★★★</span>
+            <a  class="order-small" onclick="addtocart('Mango Lassi',90)">Order</a>
+        </div>
+
+        <div class="menu-row">
+            <span>Cold Coffee</span>
+            <span>₹100</span>
+            <span class="rating">★★★★★</span>
+            <a  class="order-small" onclick="addtocart('Cold Coffee',100)">Order</a>
+        </div>
+
+        <div class="menu-row">
+            <span>Fresh Fruit Juice</span>
+            <span>₹90</span>
+            <span class="rating">★★★★☆</span>
+            <a  class="order-small" onclick="addtocart('Fresh Fruit Juice',90)">Order</a>
+        </div>
+
+        <div class="menu-row">
+            <span>Soft Drink</span>
+            <span>₹50</span>
+            <span class="rating">★★★★☆</span>
+            <a  class="order-small" onclick="addtocart('Soft Drink',50)">Order</a>
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+     <div class="footer-container">
+                <p>Contact us on Instagram or LinkedIn</p>
+                <a  href="https://www.instagram.com/srinuu._.08/">
+                    <img src="images/insta.png" alt="Instagram Logo" width="30" height="30">
+                </a>
+                <a  href="https://www.linkedin.com/in/selam-srinivasareddy-9aba85369/">
+                    <img src="images/linkedin.png" alt="LinkedIn Logo" width="30" height="30"></a>
+    </div>
+
+
+    <footer>
+
+        <h4>&copy; 2026 FoodHub. All rights reserved.</h4>
+
+    </footer>
+<script src="js/menu.js"></script>
+</body>
+
+</html>
