@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodHub - Checkout</title>
+    <title>FoodHub - Admin</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,22 +22,13 @@
         <a href="login.html" class="nav-link" id="accountLink">Login</a>
     </nav>
 </header>
-    <main class="checkout-container">
-        <h1>Order Summary</h1>
-        <section class="menu-section">
-            <div class="menu-table checkout-table">
-                <div class="menu-header">
-                    <span>Item</span><span>Price</span><span>Quantity</span><span>Total</span>
-                </div>
-                <div id="checkoutItems"></div>
-            </div>
-            <div class="total-container"><div id="checkoutTotal"></div></div>
-            <div class="place-order-container">
-                <button class="checkout-button" onclick="placeOrder()">PLACE ORDER</button>
-            </div>
-        </section>
+    <main class="admin-container">
+        <h1>Admin Dashboard</h1>
+        <p class="admin-welcome">Welcome, Admin. This is a frontend demo dashboard.</p>
+        <div class="admin-card"><h2>Orders</h2><div id="adminOrders"></div></div>
+        <button class="checkout-button" onclick="logoutUser()">Logout</button>
     </main>
     <script src="js/common.js"></script>
-    <script src="js/checkout.js"></script>
+    <script src="js/admin.js"></script>
 </body>
 </html>

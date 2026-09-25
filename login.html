@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta  charset="UTF-8">
-        <meta  name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FoodHub-Login</title>
-         <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header>
-            <div class="logo-container">
-               
-                <img src="images/logo.png" alt="FoodHub Logo" width="150" height="150">   
-                <h1><span class="food">Food</span><span class="hub">Hub</span></h1>
-            </div>    
-            <div class="home-container">
-                    <a href="index.html" class="nav-link"><h2>Home</h2></a>
-            </div>
-            
-
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHub - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="logo-container">
+        <a href="index.html" class="brand-link">
+            <img src="images/logo.png" alt="FoodHub Logo" width="80" height="80">
+            <h1><span class="food">Food</span><span class="hub">Hub</span></h1>
+        </a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <nav class="nav-container" id="mainNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="cart.html" class="nav-link">Cart <span class="cart-badge" id="cartCount">0</span></a>
+        <a href="login.html" class="nav-link" id="accountLink">Login</a>
+    </nav>
+</header>
+    <main class="auth-container">
         <section class="login-container">
-            <h1>Login</h1>
-            <form id="loginForm">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required placeholder="Name!">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required placeholder="Password!">
+            <h1>Welcome Back</h1>
+            <div class="auth-tabs">
+                <button type="button" class="auth-tab active" onclick="showLogin('user')">User Login</button>
+                <button type="button" class="auth-tab" onclick="showLogin('admin')">Admin Login</button>
+            </div>
+            <form id="userLoginForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" required placeholder="Enter username">
+                <label for="password">Password</label>
+                <input type="password" id="password" required placeholder="Enter password">
                 <button type="submit">Login</button>
-        
+                <p id="loginMessage" class="form-message"></p>
             </form>
+            <form id="adminLoginForm" class="hidden">
+                <label for="adminUsername">Admin Username</label>
+                <input type="text" id="adminUsername" required placeholder="Admin username">
+                <label for="adminPassword">Admin Password</label>
+                <input type="password" id="adminPassword" required placeholder="Admin password">
+                <button type="submit">Admin Login</button>
+                <p class="demo-note">Demo admin: <b>admin</b> / <b>admin123</b></p>
+                <p id="adminMessage" class="form-message"></p>
+            </form>
+            <p class="signup-text">Don't have an account? <a href="signup.html">Create Account</a></p>
         </section>
-    </body>
+    </main>
+    <script src="js/common.js"></script>
+    <script src="js/login.js"></script>
+</body>
 </html>

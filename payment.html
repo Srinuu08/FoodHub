@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHub - Payment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="logo-container">
+        <a href="index.html" class="brand-link">
+            <img src="images/logo.png" alt="FoodHub Logo" width="80" height="80">
+            <h1><span class="food">Food</span><span class="hub">Hub</span></h1>
+        </a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <nav class="nav-container" id="mainNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="cart.html" class="nav-link">Cart <span class="cart-badge" id="cartCount">0</span></a>
+        <a href="login.html" class="nav-link" id="accountLink">Login</a>
+    </nav>
+</header>
+    <main class="payment-container">
+        <h1>Choose Payment Method</h1>
+        <div class="payment-total" id="paymentTotal">Total: ₹0</div>
+        <div class="payment-options">
+            <label class="payment-option"><input type="radio" name="payment" value="upi"> <span>📱 UPI Apps</span></label>
+            <label class="payment-option"><input type="radio" name="payment" value="cash"> <span>💵 Cash on Delivery</span></label>
+        </div>
+        <div id="upiBox" class="upi-box hidden">
+            <p>Select a dummy UPI app:</p>
+            <div class="upi-apps">
+                <button type="button" onclick="selectUpi('Google Pay')">Google Pay</button>
+                <button type="button" onclick="selectUpi('PhonePe')">PhonePe</button>
+                <button type="button" onclick="selectUpi('Paytm')">Paytm</button>
+            </div>
+            <p id="upiSelected">No UPI app selected</p>
+        </div>
+        <p id="paymentMessage" class="form-message"></p>
+        <button class="checkout-button" onclick="continueToCheckout()">Continue to Checkout</button>
+    </main>
+    <script src="js/common.js"></script>
+    <script src="js/payment.js"></script>
+</body>
+</html>

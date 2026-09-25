@@ -1,45 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>FoodHub-Cart</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body class="cart-background">
-        <header>
-            <div class="logo-container">               
-                <img src="images/logo.png" alt="FoodHub Logo" width="150" height="150">   
-                <h1><span class="food">Food</span><span class="hub">Hub</span></h1>
-            </div>
-            <div class="nav-container">
-               <a href="index.html" class="nav-link"><h2>Home</h2></a> 
-               <a href="menu.html" class="nav-link"><h2>Menu</h2></a>
-            </div>           
-        </header>
-        <div class="cart-container">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHub - Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="logo-container">
+        <a href="index.html" class="brand-link">
+            <img src="images/logo.png" alt="FoodHub Logo" width="80" height="80">
+            <h1><span class="food">Food</span><span class="hub">Hub</span></h1>
+        </a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <nav class="nav-container" id="mainNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="cart.html" class="nav-link">Cart <span class="cart-badge" id="cartCount">0</span></a>
+        <a href="login.html" class="nav-link" id="accountLink">Login</a>
+    </nav>
+</header>
+    <main class="cart-container">
         <h1>Your Cart</h1>
-        
-
-            <div class="cart-items">
-                <div  id="cartItems"></div>
-             
-            </div>
-            <div >
-                <div class="total-container" id="cartTotal"></div>
-            </div>
-        
-        
+        <div class="cart-items"><div id="cartItems"></div></div>
+        <div class="total-container"><div id="cartTotal"></div></div>
+        <div class="order-container">
+            <button class="checkout-button" onclick="goToPayment()">Proceed to Payment</button>
         </div>
+    </main>
+    <script src="js/common.js"></script>
     <script src="js/cart.js"></script>
-        <div class="order-container" >
-            <button class="checkout-button" onclick="window.location.href='checkout.html'">Check Out</button>
-        </div>
-    </body>
-     <footer>
-
-        <h4>&copy; 2026 FoodHub. All rights reserved.</h4>
-
-    </footer>   
-    
+</body>
+<footer><h4>&copy; 2026 FoodHub. All rights reserved.</h4></footer>
 </html>

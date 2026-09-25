@@ -5,14 +5,12 @@ FoodHub/
 ├── cart.html
 ├── checkout.html
 ├── login.html
-├
+├── signup.html
 │
 ├── css/
 │   └── style.css
 │
 ├── js/
-|    ├── menu.js
-|    ├── cart.js
-|    ├── checkout.js
-|    └── login.js│
+│   └── app.js
+│
 └── images/

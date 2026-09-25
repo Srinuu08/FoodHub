@@ -91,3 +91,5 @@ function calculateTotal() {
 
     totalElement.innerHTML = `Total: ₹${total}`;
 }
+
+if (typeof updateHeader === "function") updateHeader();

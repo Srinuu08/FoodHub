@@ -1,78 +1,37 @@
 function displayCheckout() {
-
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    let checkoutContainer = document.getElementById("checkoutItems");
-
-    if (cart.length === 0) {
-
-        checkoutContainer.innerHTML = "<p>Your cart is empty!</p>";
-
-        document.getElementById("checkoutTotal").innerHTML = "Total: ₹0";
-
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const container = document.getElementById("checkoutItems");
+    if (!cart.length) {
+        container.innerHTML = "<p>Your cart is empty!</p>";
+        document.getElementById("checkoutTotal").textContent = "Total: ₹0";
         return;
     }
-
-    checkoutContainer.innerHTML = "";
-
-    cart.forEach(function(food) {
-
-        let itemTotal = food.price * food.quantity;
-
-        let checkoutRow = document.createElement("div");
-
-        checkoutRow.className = "cart-row";
-
-        checkoutRow.innerHTML = `
-            <span>${food.name}</span>
-            <span>₹${food.price}</span>
-            <span>${food.quantity}</span>
-            <span>₹${itemTotal}</span>
-        `;
-
-        checkoutContainer.appendChild(checkoutRow);
-
+    container.innerHTML = "";
+    cart.forEach(food => {
+        const row = document.createElement("div");
+        row.className = "cart-row";
+        row.innerHTML = `<span>${food.name}</span><span>₹${food.price}</span><span>${food.quantity}</span><span>₹${food.price * food.quantity}</span>`;
+        container.appendChild(row);
     });
-
-    calculateCheckoutTotal();
+    const total = cart.reduce((sum, f) => sum + f.price * f.quantity, 0);
+    document.getElementById("checkoutTotal").textContent = `Total: ₹${total}`;
+    const payment = localStorage.getItem("paymentMethod") || "Not selected";
+    let p = document.getElementById("paymentInfo");
+    if (!p) { p = document.createElement("p"); p.id="paymentInfo"; document.querySelector(".checkout-container").appendChild(p); }
+    p.className="payment-info"; p.textContent = `Payment: ${payment}`;
 }
-
-
-function calculateCheckoutTotal() {
-
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    let total = 0;
-
-    cart.forEach(function(food) {
-
-        total = total + (food.price * food.quantity);
-
-    });
-
-    let totalElement = document.getElementById("checkoutTotal");
-
-    totalElement.innerHTML = `Total: ₹${total}`;
-}
-
-
 function placeOrder() {
-
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    if (cart.length === 0) {
-
-        alert("Your cart is empty!");
-
-        return;
-    }
-
-    alert("🎉 Order placed successfully!");
-
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (!cart.length) { alert("Your cart is empty!"); return; }
+    const user = JSON.parse(localStorage.getItem("currentUser"));
+    if (!user || user.role !== "user") { alert("Please login first."); window.location.href="login.html"; return; }
+    const total = cart.reduce((sum, f) => sum + f.price * f.quantity, 0);
+    const orders = JSON.parse(localStorage.getItem("foodhubOrders")) || [];
+    orders.push({ id: "FH" + Date.now(), user:user.username, items:cart, total, payment:localStorage.getItem("paymentMethod") || "Not selected", date:new Date().toLocaleString() });
+    localStorage.setItem("foodhubOrders", JSON.stringify(orders));
     localStorage.removeItem("cart");
-
-    window.location.href = "index.html";
+    localStorage.removeItem("paymentMethod");
+    alert("🎉 Order placed successfully!");
+    window.location.href="index.html";
 }
-
-
 displayCheckout();
