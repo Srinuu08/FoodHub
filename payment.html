@@ -30,12 +30,22 @@
             <label class="payment-option"><input type="radio" name="payment" value="cash"> <span>💵 Cash on Delivery</span></label>
         </div>
         <div id="upiBox" class="upi-box hidden">
-            <p>Select a dummy UPI app:</p>
+            <p>Select a UPI app:</p>
             <div class="upi-apps">
                 <button type="button" onclick="selectUpi('Google Pay')">Google Pay</button>
                 <button type="button" onclick="selectUpi('PhonePe')">PhonePe</button>
                 <button type="button" onclick="selectUpi('Paytm')">Paytm</button>
             </div>
+            <div class="upi-section">
+        <label for="upiId">Enter your UPI ID</label>
+        <input
+            type="text"
+            id="upiId"
+            name="upiId"
+            placeholder="example@upi"
+            autocomplete="off"
+        >
+</div>
             <p id="upiSelected">No UPI app selected</p>
         </div>
         <p id="paymentMessage" class="form-message"></p>

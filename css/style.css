@@ -543,3 +543,26 @@ footer h4 {
   .custom-box { font-size:25px; }
   .food-slider-track img { width:220px; height:160px; }
 }
+.upi-section {
+    margin-top: 15px;
+}
+
+.upi-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.upi-section input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.upi-section input:focus {
+    outline: none;
+    border-color: #e85d04;
+}
