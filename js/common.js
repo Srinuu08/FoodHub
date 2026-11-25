@@ -1,11 +1,16 @@
+function readStoredJSON(key, fallback) {
+    try { return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback)); }
+    catch { return fallback; }
+}
+
 function updateHeader() {
     const countEl = document.getElementById("cartCount");
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cart = readStoredJSON("cart", []);
     const count = cart.reduce((sum, item) => sum + Number(item.quantity || 0), 0);
     if (countEl) countEl.textContent = count;
 
     const accountLink = document.getElementById("accountLink");
-    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    const currentUser = readStoredJSON("currentUser", null);
     if (accountLink && currentUser) {
         accountLink.textContent = currentUser.role === "admin" ? "Admin" : currentUser.username;
         accountLink.href = currentUser.role === "admin" ? "admin.html" : "index.html";
@@ -35,9 +40,9 @@ function setupMobileMenu() {
 }
 
 function goToPayment() {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cart = readStoredJSON("cart", []);
     if (!cart.length) { alert("Your cart is empty!"); return; }
-    const user = JSON.parse(localStorage.getItem("currentUser"));
+    const user = readStoredJSON("currentUser", null);
     if (!user || user.role !== "user") {
         alert("Please login or create an account before payment.");
         window.location.href = "login.html";
@@ -51,4 +56,7 @@ function logoutUser() {
     window.location.href = "login.html";
 }
 
+window.addEventListener("storage", updateHeader);
+window.addEventListener("foodhub-cart-updated", updateHeader);
+window.addEventListener("foodhub-user-updated", updateHeader);
 document.addEventListener("DOMContentLoaded", () => { updateHeader(); setupMobileMenu(); });

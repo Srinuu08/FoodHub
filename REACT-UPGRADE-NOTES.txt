@@ -1,0 +1,17 @@
+FoodHub React Cart & Login Upgrade
+
+The original FoodHub HTML/CSS/JS pages have been preserved.
+The React implementation is inside the react-app folder.
+
+To run:
+1. Install Node.js LTS if it is not already installed.
+2. Open terminal in FoodHub/react-app.
+3. Run: npm install
+4. Run: npm run dev
+5. Open the Vite URL and use #/cart or #/login.
+
+Important:
+- Cart storage key remains "cart", matching the existing menu.js.
+- Login uses "foodhubUsers" and "currentUser", matching the existing login.js.
+- Existing menu and payment pages remain in the parent project.
+- This is a front-end demo, not production-secure authentication.

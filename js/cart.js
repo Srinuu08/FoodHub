@@ -3,8 +3,10 @@ function displayCart() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     let cartContainer = document.getElementById("cartItems");
+    const query=(document.getElementById("cartSearch")?.value||"").trim().toLowerCase();
+    const visibleCart=cart.filter(food=>food.name.toLowerCase().includes(query));
 
-    if (cart.length === 0) {
+    if (visibleCart.length === 0) {
         cartContainer.innerHTML = "<p>Your cart is empty!</p>";
         calculateTotal();
         return;
@@ -12,7 +14,8 @@ function displayCart() {
 
     cartContainer.innerHTML = "";
 
-    cart.forEach(function(food, index) {
+    visibleCart.forEach(function(food) {
+        const index=cart.findIndex(item=>item.name===food.name);
 
         let foodItem = document.createElement("div");
         foodItem.className = "cart-item";
@@ -93,3 +96,5 @@ function calculateTotal() {
 }
 
 if (typeof updateHeader === "function") updateHeader();
+
+ document.getElementById("cartSearch")?.addEventListener("input",displayCart);

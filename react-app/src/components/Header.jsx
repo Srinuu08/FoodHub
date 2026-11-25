@@ -25,10 +25,10 @@ export default function Header() {
 
   return (
     <header className="site-header">
-      <Link className="brand-link" to="/cart">
+      <a className="brand-link" href="../index.html">
         <img src="./images/logo.png" alt="FoodHub logo" />
         <h1><span>Food</span><b>Hub</b></h1>
-      </Link>
+      </a>
       <nav>
         <a href="../index.html">Home</a>
         <a href="../menu.html">Menu</a>
